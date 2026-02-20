@@ -1,4 +1,4 @@
-\# IT 5104N Game Development Projects
+# IT 5104N Game Development Projects
 
 
 
@@ -6,7 +6,7 @@ My collection of game development projects made with Godot Engine.
 
 
 
-\## Projects
+## Projects
 
 
 
