@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1l5ksx3eajcb"]
+
+[ext_resource type="Script" uid="uid://ctno5sluwjbot" path="res://helloworld.gd" id="1_3vijo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjwuw"]
+size = Vector2(1150, 114.5)
+
+[node name="Main" type="Node2D" unique_id=529045668]
+script = ExtResource("1_3vijo")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1777302599]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1422809865]
+position = Vector2(577, 588.25)
+shape = SubResource("RectangleShape2D_gjwuw")
