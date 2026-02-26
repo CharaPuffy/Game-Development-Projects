@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xsf4auwc5hrq"]
+
+[ext_resource type="Script" uid="uid://3ly2mv31036" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://do5bgiawsgdxx" path="res://scenes/levels/level1.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node2D" unique_id=2135990234]
+script = ExtResource("1_0wfyh")
+
+[node name="LevelRoot" parent="." unique_id=1108134855 instance=ExtResource("1_o5qli")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1001803066]
+
+[node name="Fade" type="ColorRect" parent="HUD" unique_id=1365636658]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

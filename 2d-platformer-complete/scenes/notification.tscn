@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bndwdabhmuc13"]
+
+[ext_resource type="Script" uid="uid://cq30xe4cm2rae" path="res://scripts/notification.gd" id="1_a8rcd"]
+
+[node name="Notification" type="CanvasLayer" unique_id=1273150365]
+script = ExtResource("1_a8rcd")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=425686235]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1769024114]
+
+[node name="Label" type="Label" parent="." unique_id=1282381272]
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 24.0
