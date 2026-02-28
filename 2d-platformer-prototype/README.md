@@ -20,7 +20,7 @@ HUD elements (health bars, scores), menu systems (CanvasLayer), audio buses for 
 
 Exercises:
 
-&nbsp;     Integrate UI into your game proto; add sound effects, walk, run, slash, etc. You may also add game music, introduction, and so on.
+      Integrate UI into your game proto; add sound effects, walk, run, slash, etc. You may also add game music, introduction, and so on.
 
 
 
@@ -34,11 +34,25 @@ Pathfinding navigation, finite state machines for behaviors (patrol/attack), ene
 
 Exercises:
 
-&nbsp;     Add enemies to your game (note enemies, not obstacles)
+      Add enemies to your game (note enemies, not obstacles)
 
 
 
 * Added snail enemies that move back and forth.
+
+
+
+\## GAMEPLAY DEMO SCREENSHOTS
+
+The image shows the two levels of varying difficulty along with enemies, obstacles, and scoring system.
+
+
+
+!\[Gameplay Screenshot](screenshots/level1.png)
+
+!\[Gameplay Screenshot](screenshots/level2.png)
+
+
 
 
 
