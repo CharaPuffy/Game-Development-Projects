@@ -42,7 +42,7 @@ Exercises:
 
 
 
-\## GAMEPLAY DEMO SCREENSHOTS
+# Gameplay Demo Screenshots
 
 The image shows the two levels of varying difficulty along with enemies, obstacles, and scoring system.
 
@@ -51,8 +51,4 @@ The image shows the two levels of varying difficulty along with enemies, obstacl
 !\[Gameplay Screenshot](screenshots/level1.png)
 
 !\[Gameplay Screenshot](screenshots/level2.png)
-
-
-
-
 
