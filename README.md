@@ -12,3 +12,4 @@ My collection of game development projects made with Godot Engine.
 
 * Simple scene with moving node (Week 1 and Week 2)
 * 2D Platformer with moving enemies, levels, death scenes, death sound, and score system (Week 3 Activity 1 \& 2)
+* 3D Platformer prototype (ft. Claude AI)
