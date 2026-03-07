@@ -42,15 +42,30 @@ Exercises:
 
 
 
+# Week 4: Activity 2 Windows and Android Exports and Installations
+
+Export your game for both Windows and Android devices.
+
+
+
 # Gameplay Demo Screenshots
 
 The image shows the two levels of varying difficulty along with enemies, obstacles, and scoring system.
 
-
+Levels:
 
 ![Level1_image](screenshots/level1.png)
 
 
 ![Level2_image](screenshots/level2.png)
+
+
+
+Windows and Android demos respectively:
+
+![windowsdemo_image](screenshots/windows_pc_demo.png)
+
+
+![androiddemo_image](screenshots/android_mobile_demo.png)
 
 

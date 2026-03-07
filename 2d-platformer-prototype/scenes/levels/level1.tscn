@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dbi2aut41277h" path="res://scenes/spike.tscn" id="5_1seuy"]
 [ext_resource type="Texture2D" uid="uid://chfhoo2i5tuw0" path="res://assets/images/Tilemap/Checkpoint (Flag Idle)(64x64).png" id="5_dywbp"]
 [ext_resource type="PackedScene" uid="uid://ftsgmpc7aj3j" path="res://scenes/apple.tscn" id="7_2r1tl"]
+[ext_resource type="PackedScene" uid="uid://cv6ju8yyqjk8w" path="res://scenes/touch_hud.tscn" id="8_thud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dd0lh"]
 texture = ExtResource("1_4tcl0")
@@ -301,3 +302,5 @@ position = Vector2(582, 170)
 
 [node name="Apple4" parent="Apples" unique_id=344965811 instance=ExtResource("7_2r1tl")]
 position = Vector2(1079, 116)
+
+[node name="TouchHUD" parent="." unique_id=495885975 instance=ExtResource("8_thud")]
