@@ -66,6 +66,6 @@ Windows and Android demos respectively:
 ![windowsdemo_image](screenshots/windows_pc_demo.png)
 
 
-![androiddemo_image](screenshots/android_mobile_demo.png)
+![androiddemo_image](screenshots/android_mobile_demo.jpg)
 
 
