@@ -19,3 +19,5 @@ My collection of game development projects made with Godot Engine.
 ## Updates:
 
 * 2D Platformer game now compatible with Windows and Android with proper controls.
+* 2D Platformer game now has Menu and Level UI with game pause (Esc) and 2-player gameplay.
+
