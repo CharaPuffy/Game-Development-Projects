@@ -6,7 +6,15 @@ Mahiwaga is a 2D, top-down fighting game in which players, known as Mythic Hunte
 
 “In Mahiwaga, players combat deadly folklore creatures across the globe, from the Philippines to Japan, in a fast-paced 2D top-down fighting adventure where leveling up, making powerful gear, and recruiting allies are essential for surviving an ever-expanding world of monsters.”
 
-# DISCLAIMER
-This game is a work-in-progress and is only a prototype. Final game may not look like the prototype due to major design changes.
+## Meet the team!
 
-Main Menu and Gameplay are separated due to possible merge errors. 
+Charles Neil J. Capule – Lead Programmer / Godot Specialist
+Lloyd Anton P. Montero – Artist & Animator
+Jer Jurich Matthew Ty-Farma – Game Designer / Level Designer
+
+
+# DISCLAIMER
+- This game is a work-in-progress and is only a prototype. Final game may not look like the prototype due to major design changes.
+
+- Main Menu and Gameplay are separated due to possible merge errors.
+
