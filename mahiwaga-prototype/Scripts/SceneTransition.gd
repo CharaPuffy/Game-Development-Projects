@@ -10,10 +10,11 @@ extends CanvasLayer
 #
 # Usage from any script:
 #   SceneTransition.fade_to("res://scenes/PlayMenu.tscn")
+#   SceneTransition.fade_to("res://Scenes/guild_hall.tscn", 1.5)
 
 signal transition_finished
 
-const FADE_DURATION := 0.3  # seconds
+const DEFAULT_FADE_DURATION := 0.3  # seconds
 
 var _overlay: ColorRect
 var _tween: Tween
@@ -30,13 +31,14 @@ func _ready() -> void:
 
 
 ## Fade to black, change scene, then fade back in.
-func fade_to(scene_path: String) -> void:
+## duration: seconds for each half of the fade (fade-out and fade-in).
+func fade_to(scene_path: String, duration: float = DEFAULT_FADE_DURATION) -> void:
 	_overlay.mouse_filter = Control.MOUSE_FILTER_STOP  # Block input during transition.
 
 	if _tween:
 		_tween.kill()
 	_tween = create_tween()
-	_tween.tween_property(_overlay, "color", Color(0, 0, 0, 1), FADE_DURATION)
+	_tween.tween_property(_overlay, "color", Color(0, 0, 0, 1), duration)
 	await _tween.finished
 
 	get_tree().change_scene_to_file(scene_path)
@@ -45,7 +47,7 @@ func fade_to(scene_path: String) -> void:
 	await get_tree().process_frame
 
 	_tween = create_tween()
-	_tween.tween_property(_overlay, "color", Color(0, 0, 0, 0), FADE_DURATION)
+	_tween.tween_property(_overlay, "color", Color(0, 0, 0, 0), duration)
 	await _tween.finished
 
 	_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE

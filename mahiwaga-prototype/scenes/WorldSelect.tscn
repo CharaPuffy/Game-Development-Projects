@@ -73,7 +73,7 @@ theme_override_constants/separation = 10
 texture_filter = 1
 layout_mode = 2
 custom_minimum_size = Vector2(0, 180)
-color = Color(0.15, 0.35, 0.25, 1)
+color = Color(0.1, 0.3, 0.15, 1)
 
 [node name="MapIcon0" type="Label" parent="WorldContainer/WorldCard0/VBox0/MapPreview0"]
 texture_filter = 1
@@ -81,7 +81,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-text = "🌲"
+text = "🌴"
 horizontal_alignment = 1
 vertical_alignment = 1
 theme_override_font_sizes/font_size = 68
@@ -90,7 +90,7 @@ theme_override_fonts/font = ExtResource("2")
 [node name="WorldName0" type="Label" parent="WorldContainer/WorldCard0/VBox0"]
 texture_filter = 1
 layout_mode = 2
-text = "VERDANT FOREST"
+text = "PHILIPPINES"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 22
 theme_override_fonts/font = ExtResource("2")
@@ -99,7 +99,7 @@ theme_override_colors/font_color = Color(0.9, 0.85, 0.3, 1)
 [node name="WorldDesc0" type="Label" parent="WorldContainer/WorldCard0/VBox0"]
 texture_filter = 1
 layout_mode = 2
-text = "A lush woodland teeming\nwith hidden dangers."
+text = "A land of mystery and\nlegends waiting to be explored."
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
@@ -117,6 +117,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 custom_minimum_size = Vector2(280, 300)
+modulate = Color(0.6, 0.6, 0.6, 1)
 
 [node name="VBox1" type="VBoxContainer" parent="WorldContainer/WorldCard1"]
 texture_filter = 1
@@ -127,7 +128,7 @@ theme_override_constants/separation = 10
 texture_filter = 1
 layout_mode = 2
 custom_minimum_size = Vector2(0, 180)
-color = Color(0.35, 0.28, 0.15, 1)
+color = Color(0.15, 0.15, 0.2, 1)
 
 [node name="MapIcon1" type="Label" parent="WorldContainer/WorldCard1/VBox1/MapPreview1"]
 texture_filter = 1
@@ -135,7 +136,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-text = "🏜"
+text = "🔒"
 horizontal_alignment = 1
 vertical_alignment = 1
 theme_override_font_sizes/font_size = 68
@@ -144,33 +145,35 @@ theme_override_fonts/font = ExtResource("2")
 [node name="WorldName1" type="Label" parent="WorldContainer/WorldCard1/VBox1"]
 texture_filter = 1
 layout_mode = 2
-text = "ASHEN DESERT"
+text = "???"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 22
 theme_override_fonts/font = ExtResource("2")
-theme_override_colors/font_color = Color(0.9, 0.85, 0.3, 1)
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
 
 [node name="WorldDesc1" type="Label" parent="WorldContainer/WorldCard1/VBox1"]
 texture_filter = 1
 layout_mode = 2
-text = "Scorched dunes hiding\nancient ruins and peril."
+text = "Complete Philippines\nto unlock this world."
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
-theme_override_colors/font_color = Color(0.7, 0.7, 0.75, 1)
+theme_override_colors/font_color = Color(0.45, 0.45, 0.5, 1)
 
 [node name="EnterBtn1" type="Button" parent="WorldContainer/WorldCard1/VBox1"]
 texture_filter = 1
 layout_mode = 2
-text = "Enter World"
+text = "🔒 Locked"
 theme_override_font_sizes/font_size = 19
 theme_override_fonts/font = ExtResource("2")
+disabled = true
 
 [node name="WorldCard2" type="PanelContainer" parent="WorldContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 custom_minimum_size = Vector2(280, 300)
+modulate = Color(0.6, 0.6, 0.6, 1)
 
 [node name="VBox2" type="VBoxContainer" parent="WorldContainer/WorldCard2"]
 texture_filter = 1
@@ -181,7 +184,7 @@ theme_override_constants/separation = 10
 texture_filter = 1
 layout_mode = 2
 custom_minimum_size = Vector2(0, 180)
-color = Color(0.1, 0.18, 0.38, 1)
+color = Color(0.12, 0.12, 0.18, 1)
 
 [node name="MapIcon2" type="Label" parent="WorldContainer/WorldCard2/VBox2/MapPreview2"]
 texture_filter = 1
@@ -189,7 +192,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-text = "🏰"
+text = "🔒"
 horizontal_alignment = 1
 vertical_alignment = 1
 theme_override_font_sizes/font_size = 68
@@ -198,24 +201,25 @@ theme_override_fonts/font = ExtResource("2")
 [node name="WorldName2" type="Label" parent="WorldContainer/WorldCard2/VBox2"]
 texture_filter = 1
 layout_mode = 2
-text = "SHADOWKEEP"
+text = "???"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 22
 theme_override_fonts/font = ExtResource("2")
-theme_override_colors/font_color = Color(0.9, 0.85, 0.3, 1)
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
 
 [node name="WorldDesc2" type="Label" parent="WorldContainer/WorldCard2/VBox2"]
 texture_filter = 1
 layout_mode = 2
-text = "A crumbling fortress\nshrouded in eternal night."
+text = "Complete Philippines\nto unlock this world."
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
-theme_override_colors/font_color = Color(0.7, 0.7, 0.75, 1)
+theme_override_colors/font_color = Color(0.45, 0.45, 0.5, 1)
 
 [node name="EnterBtn2" type="Button" parent="WorldContainer/WorldCard2/VBox2"]
 texture_filter = 1
 layout_mode = 2
-text = "Enter World"
+text = "🔒 Locked"
 theme_override_font_sizes/font_size = 19
 theme_override_fonts/font = ExtResource("2")
+disabled = true

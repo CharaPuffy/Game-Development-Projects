@@ -22,4 +22,5 @@ My collection of game development projects made with Godot Engine.
 * 2D Platformer game now compatible with Windows and Android with proper controls.
 * 2D Platformer game now has Menu and Level UI with game pause (Esc) and 2-player gameplay.
 * added Mahiwaga by December Studios for Final Game Project
+* updated Mahiwaga - merged the separated main menu and main game prototype (04-2-2026)
 
