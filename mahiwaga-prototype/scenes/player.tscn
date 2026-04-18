@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqgvauv8o1rt3"]
 
 [ext_resource type="Script" uid="uid://cme0tt4hmqbhb" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" path="res://Scripts/SwordHitbox.gd" id="2_swordhb"]
 [ext_resource type="Texture2D" uid="uid://ufm2epwvabkq" path="res://icon.svg" id="1_v0iea"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
@@ -21,6 +22,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
 size = Vector2(58, 60)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sword"]
+radius = 10.0
+height = 55.0
+
 [node name="Player" type="CharacterBody2D" unique_id=576924845]
 process_mode = 1
 script = ExtResource("1_cvnsp")
@@ -38,5 +43,20 @@ position_smoothing_enabled = true
 [node name="WeaponPivot" type="Marker2D" parent="." unique_id=622571167]
 
 [node name="WeaponSlot" type="Marker2D" parent="WeaponPivot" unique_id=2107046164]
+position = Vector2(40, 0)
 
 [node name="Weapon" type="Sprite2D" parent="WeaponPivot/WeaponSlot" unique_id=1500699962]
+position = Vector2(20, 0)
+scale = Vector2(0.4, 0.4)
+
+[node name="SwordHitbox" type="Area2D" parent="WeaponPivot/WeaponSlot" unique_id=3301920011]
+script = ExtResource("2_swordhb")
+collision_layer = 4
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponPivot/WeaponSlot/SwordHitbox" unique_id=4401920012]
+position = Vector2(30, 0)
+shape = SubResource("CapsuleShape2D_sword")
+rotation = 1.5708
+disabled = true

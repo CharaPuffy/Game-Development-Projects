@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+# TutorialPlayer.gd
+# Same as player.gd but starts with NO weapon.
+# Pressing E near a weapon pickup equips it; pressing E again on a different pickup switches.
+
 const SPEED = 300.0
 
 @onready var wpnPivot = $WeaponPivot
@@ -16,33 +20,31 @@ var swing_dir := 1.0
 const SWING_SPEED := 8.0
 const SWING_ARC := 90.0
 
-func update_weapon():
-	print("Equipping weapon for: ", Global.specialization)
-	match Global.specialization:
-		"Hunter":
-			weapon.texture = load("res://Assets/art/broadsword.png")
-		"Mage":
-			weapon.texture = load("res://Assets/art/staff.png")
-		"Fighter":
-			weapon.texture = load("res://Assets/art/battle-ax.png")
-		"Supporter":
-			weapon.texture = load("res://Assets/art/staff.png")
-		"Assassin":
-			weapon.texture = load("res://Assets/art/broadsword.png")
+# Tutorial: no weapon equipped at start
+# "Sword", "Staff", or "" (none)
+var current_weapon: String = ""
+
+# Nearby pickup node (set by TutorialWorld)
+var nearby_pickup: Node = null
+
+func _ready() -> void:
+	projectile_scene = load("res://scenes/StaffProjectile.tscn")
+	sword_hitbox.monitoring = false
+	sword_hitbox.get_node("CollisionShape2D").disabled = true
+	# Hide weapon sprite until equipped
+	weapon.visible = false
+
+func equip_weapon(weapon_name: String) -> void:
+	current_weapon = weapon_name
+	weapon.visible = true
+	match weapon_name:
 		"Sword":
 			weapon.texture = load("res://Assets/art/broadsword.png")
 		"Staff":
 			weapon.texture = load("res://Assets/art/staff.png")
 
 func _is_staff() -> bool:
-	return Global.specialization in ["Mage", "Supporter", "Staff"]
-
-func _ready() -> void:
-	print("Welcome, Adventurer ", Global.player_name)
-	update_weapon()
-	projectile_scene = load("res://scenes/StaffProjectile.tscn")
-	sword_hitbox.monitoring = false
-	sword_hitbox.get_node("CollisionShape2D").disabled = true
+	return current_weapon == "Staff"
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -67,11 +69,19 @@ func _physics_process(delta: float) -> void:
 				sword_hitbox.get_node("CollisionShape2D").disabled = true
 				sword_hitbox.reset_swing()
 
-# Use _input instead of _unhandled_input so UI nodes don't block mouse clicks
 func _input(event: InputEvent) -> void:
+	# E key: equip nearby weapon
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_E:
+			if nearby_pickup != null and nearby_pickup.has_method("get_weapon_name"):
+				equip_weapon(nearby_pickup.get_weapon_name())
+
+	# Left click: attack if weapon equipped
 	if event is InputEventMouseButton \
 			and event.button_index == MOUSE_BUTTON_LEFT \
 			and event.pressed:
+		if current_weapon == "":
+			return
 		if _is_staff():
 			_fire_projectile()
 		else:

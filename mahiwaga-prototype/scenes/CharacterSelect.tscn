@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://character_select"]
 
-[ext_resource type="Script" path="res://scripts/CharacterSelect.gd" id="1"]
+[ext_resource type="Script" path="res://Scripts/CharacterSelect.gd" id="1"]
 [ext_resource type="FontFile" path="res://fonts/Jersey15-Regular.ttf" id="2"]
 
 [node name="CharacterSelect" type="Control"]
@@ -36,15 +36,31 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
+offset_left = -240.0
 offset_top = 20.0
-offset_right = 200.0
+offset_right = 240.0
 offset_bottom = 65.0
-text = "SELECT CHARACTER"
+text = "CHARACTERS"
 horizontal_alignment = 1
 theme_override_font_sizes/font_size = 36
 theme_override_fonts/font = ExtResource("2")
 theme_override_colors/font_color = Color(0.9, 0.85, 0.3, 1)
+
+[node name="SubTitle" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 68.0
+offset_right = 300.0
+offset_bottom = 92.0
+text = "Character selection coming in a future update."
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.6, 0.6, 0.65, 1)
 
 [node name="CharacterGrid" type="GridContainer" parent="."]
 texture_filter = 1
@@ -53,9 +69,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -440.0
-offset_top = 90.0
+offset_top = 100.0
 offset_right = 440.0
-offset_bottom = 370.0
+offset_bottom = 390.0
 columns = 4
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
@@ -106,12 +122,14 @@ theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
 theme_override_colors/font_color = Color(0.7, 0.7, 0.75, 1)
 
-[node name="SelectBtn0" type="Button" parent="CharacterGrid/CharCard0/VBox0"]
+[node name="ComingSoon0" type="Label" parent="CharacterGrid/CharCard0/VBox0"]
 texture_filter = 1
 layout_mode = 2
-text = "Select"
-theme_override_font_sizes/font_size = 18
+text = "— Coming Soon —"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
 theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.5, 0.5, 0.55, 1)
 
 [node name="CharCard1" type="PanelContainer" parent="CharacterGrid"]
 texture_filter = 1
@@ -159,12 +177,14 @@ theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
 theme_override_colors/font_color = Color(0.7, 0.7, 0.75, 1)
 
-[node name="SelectBtn1" type="Button" parent="CharacterGrid/CharCard1/VBox1"]
+[node name="ComingSoon1" type="Label" parent="CharacterGrid/CharCard1/VBox1"]
 texture_filter = 1
 layout_mode = 2
-text = "Select"
-theme_override_font_sizes/font_size = 18
+text = "— Coming Soon —"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
 theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.5, 0.5, 0.55, 1)
 
 [node name="CharCard2" type="PanelContainer" parent="CharacterGrid"]
 texture_filter = 1
@@ -212,12 +232,14 @@ theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
 theme_override_colors/font_color = Color(0.7, 0.7, 0.75, 1)
 
-[node name="SelectBtn2" type="Button" parent="CharacterGrid/CharCard2/VBox2"]
+[node name="ComingSoon2" type="Label" parent="CharacterGrid/CharCard2/VBox2"]
 texture_filter = 1
 layout_mode = 2
-text = "Select"
-theme_override_font_sizes/font_size = 18
+text = "— Coming Soon —"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 13
 theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.5, 0.5, 0.55, 1)
 
 [node name="CharCard3" type="PanelContainer" parent="CharacterGrid"]
 texture_filter = 1
@@ -265,45 +287,11 @@ theme_override_font_sizes/font_size = 16
 theme_override_fonts/font = ExtResource("2")
 theme_override_colors/font_color = Color(0.7, 0.7, 0.75, 1)
 
-[node name="SelectBtn3" type="Button" parent="CharacterGrid/CharCard3/VBox3"]
+[node name="ComingSoon3" type="Label" parent="CharacterGrid/CharCard3/VBox3"]
 texture_filter = 1
 layout_mode = 2
-text = "Select"
-theme_override_font_sizes/font_size = 18
-theme_override_fonts/font = ExtResource("2")
-
-[node name="ConfirmPanel" type="PanelContainer" parent="."]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -220.0
-offset_top = -100.0
-offset_right = 220.0
-offset_bottom = -20.0
-visible = false
-
-[node name="ConfirmVBox" type="VBoxContainer" parent="ConfirmPanel"]
-texture_filter = 1
-layout_mode = 2
-theme_override_constants/separation = 12
-
-[node name="ConfirmLabel" type="Label" parent="ConfirmPanel/ConfirmVBox"]
-texture_filter = 1
-layout_mode = 2
-text = "Selected: None"
+text = "— Coming Soon —"
 horizontal_alignment = 1
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 13
 theme_override_fonts/font = ExtResource("2")
-theme_override_colors/font_color = Color(0.9, 0.85, 0.3, 1)
-
-[node name="ConfirmButton" type="Button" parent="ConfirmPanel/ConfirmVBox"]
-texture_filter = 1
-layout_mode = 2
-custom_minimum_size = Vector2(0, 44)
-text = "CONFIRM SELECTION"
-theme_override_font_sizes/font_size = 22
-theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.5, 0.5, 0.55, 1)
